@@ -6,6 +6,8 @@ import sys
 # 재귀한도설정
 sys.setrecursionlimit(1000000)
 
+T = int(sys.stdin.readline()) 
+
 dx = [0, 0, -1, 1] 
 dy = [1, -1, 0, 0]
 
@@ -19,8 +21,6 @@ def dfs(x, y):
             # 방문 표시
             maps[ny][nx] = -1
             dfs(nx, ny)
-
-T = int(sys.stdin.readline()) 
 
 for _ in range(T):
     M, N, K = map(int,sys.stdin.readline().split())
